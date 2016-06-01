@@ -29,5 +29,11 @@ class ContextTest < MiniTest::Spec
     child.model.must_equal ""
     child.controller.must_equal controller
     child.user.must_equal user
+
+    # contextless cell
+    contextless_cell = ParentCell.(model)
+    contextless_cell.model.must_equal model
+    contextless_cell.controller.must_equal nil
+    contextless_cell.user.must_equal nil
   end
 end

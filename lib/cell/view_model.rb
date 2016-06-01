@@ -68,7 +68,7 @@ module Cell
     end
 
     def context # TODO: explicit test.
-      @options[:context]
+      @options[:context].nil? ? {} : @options[:context]
     end
 
     module Rendering

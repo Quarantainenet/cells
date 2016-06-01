@@ -81,11 +81,11 @@ class ExternalLayoutTest < Minitest::Spec
   # collection :layout
   it do
     Cell::ViewModel.cell("comment/show", collection: [Object, Module], layout: Comment::LayoutCell).().
-      must_equal "$layout.erb{$show.erb, nil
-$show.erb, nil
-$show.erb, nil
-$show.erb, nil
-, nil}
+      must_equal "$layout.erb{$show.erb, {}
+$show.erb, {}
+$show.erb, {}
+$show.erb, {}
+, {}}
 "
   end
 end
